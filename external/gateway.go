@@ -12,8 +12,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/KaySar12/CasaOS-Common/model"
-	http2 "github.com/KaySar12/CasaOS-Common/utils/http"
+	"github.com/KaySar12/NextZen-Common/model"
+	http2 "github.com/KaySar12/NextZen-Common/utils/http"
 )
 
 const (

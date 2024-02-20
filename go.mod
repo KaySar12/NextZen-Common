@@ -1,4 +1,4 @@
-module github.com/KaySar12/CasaOS-Common
+module github.com/KaySar12/NextZen-Common
 
 go 1.20
 

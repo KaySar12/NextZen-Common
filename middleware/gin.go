@@ -13,7 +13,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/KaySar12/CasaOS-Common/utils/logger"
+	"github.com/KaySar12/NextZen-Common/utils/logger"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 )

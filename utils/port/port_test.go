@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/KaySar12/CasaOS-Common/utils/port"
+	"github.com/KaySar12/NextZen-Common/utils/port"
 	"github.com/stretchr/testify/assert"
 )
 

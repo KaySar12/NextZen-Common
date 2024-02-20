@@ -7,9 +7,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/KaySar12/CasaOS-Common/model"
-	"github.com/KaySar12/CasaOS-Common/utils/common_err"
-	"github.com/KaySar12/CasaOS-Common/utils/jwt"
+	"github.com/KaySar12/NextZen-Common/model"
+	"github.com/KaySar12/NextZen-Common/utils/common_err"
+	"github.com/KaySar12/NextZen-Common/utils/jwt"
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
