@@ -10,7 +10,7 @@ import (
 	"github.com/KaySar12/NextZen-Common/model"
 	"github.com/KaySar12/NextZen-Common/utils/common_err"
 	"github.com/KaySar12/NextZen-Common/utils/jwt"
-	"github.com/labstack/echo/v4"
+	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -108,10 +108,11 @@ func TestJWTMiddlewareWithValidToken(t *testing.T) {
 	}
 
 	// Create a Gin test context and a response recorder.
-	router := echo.New()
+	gin.SetMode(gin.TestMode)
+	router := gin.New()
 	router.Use(jwt.JWT(mockPublicKeyFunc))
-	router.GET("/test", func(c echo.Context) error {
-		return c.JSON(http.StatusOK, model.Result{
+	router.GET("/test", func(c *gin.Context) {
+		c.JSON(http.StatusOK, model.Result{
 			Success: common_err.SUCCESS,
 			Message: "success",
 		})
@@ -145,18 +146,14 @@ func TestJWTMiddlewareWithInvalidToken(t *testing.T) {
 	}
 
 	// Create a Gin test context and a response recorder.
-	router := echo.New()
+	gin.SetMode(gin.TestMode)
+	router := gin.New()
 	router.Use(jwt.JWT(mockPublicKeyFunc))
-
-	router.Use(func(next echo.HandlerFunc) echo.HandlerFunc {
-		return func(c echo.Context) error {
-			c.JSON(http.StatusOK, echo.Map{"message": "success"})
-			return next(c)
-		}
+	router.Use(func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{"message": "success"})
 	})
-	router.GET("/test", func(c echo.Context) error {
+	router.GET("/test", func(c *gin.Context) {
 		assert.Fail(t, "this handler should not be called")
-		return nil
 	})
 
 	req, _ := http.NewRequest(http.MethodGet, "/test", nil)
