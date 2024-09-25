@@ -8,7 +8,7 @@ import (
 
 	"gopkg.in/ini.v1"
 
-	"github.com/IceWhaleTech/CasaOS-Common/utils/file"
+	"github.com/KaySar12/NextZen-Common/utils/file"
 	_ "github.com/mattn/go-sqlite3" // nolint
 )
 

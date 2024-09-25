@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	http2 "github.com/IceWhaleTech/CasaOS-Common/utils/http"
+	http2 "github.com/KaySar12/NextZen-Common/utils/http"
 )
 
 func getAddress(addressFile string) (string, error) {

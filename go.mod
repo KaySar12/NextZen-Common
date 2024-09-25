@@ -1,4 +1,4 @@
-module github.com/IceWhaleTech/CasaOS-Common
+module github.com/KaySar12/NextZen-Common
 
 go 1.21
 

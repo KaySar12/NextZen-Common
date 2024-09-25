@@ -1,7 +1,7 @@
 package idevice
 
 import (
-	"github.com/IceWhaleTech/CasaOS-Common/utils/file"
+	"github.com/KaySar12/NextZen-Common/utils/file"
 )
 
 func GetOSRelease(name []string) (map[string]string, error) {

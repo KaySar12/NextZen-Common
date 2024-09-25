@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/IceWhaleTech/CasaOS-Common/model"
-	http2 "github.com/IceWhaleTech/CasaOS-Common/utils/http"
+	"github.com/KaySar12/NextZen-Common/model"
+	http2 "github.com/KaySar12/NextZen-Common/utils/http"
 	"github.com/tidwall/gjson"
 )
 
