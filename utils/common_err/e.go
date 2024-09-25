@@ -22,7 +22,9 @@ const (
 	INSUFFICIENT_PERMISSIONS      = 10011
 	TOO_MANY_LOGIN_REQUESTS       = 10012
 	USER_NOT_EXIST_OR_PWD_INVALID = 10013
-
+	OIDC_OFFLINE                  = 10014
+	OIDC_STARTING                 = 10015
+	OIDC_LIVE                     = 10016
 	// system
 	DIR_ALREADY_EXISTS              = 20001
 	FILE_ALREADY_EXISTS             = 20002
@@ -76,7 +78,7 @@ var MsgFlags = map[int]string{
 	INSUFFICIENT_PERMISSIONS:      "Insufficient permissions",
 	TOO_MANY_LOGIN_REQUESTS:       "Too many login requests",
 	USER_NOT_EXIST_OR_PWD_INVALID: "User does not exist or password is invalid",
-
+	OIDC_OFFLINE:                  "Authentik Server is Offline try again later",
 	// system
 	DIR_ALREADY_EXISTS:   "Folder already exists",
 	FILE_ALREADY_EXISTS:  "File already exists",
@@ -110,7 +112,7 @@ var MsgFlags = map[int]string{
 	COMMAND_ERROR_INVALID_OPERATION: "invalid operation",
 }
 
-// 获取错误信息
+// Get error message
 func GetMsg(code int) string {
 	msg, ok := MsgFlags[code]
 	if ok {
