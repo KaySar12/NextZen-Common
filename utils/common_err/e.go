@@ -22,6 +22,9 @@ const (
 	INSUFFICIENT_PERMISSIONS      = 10011
 	TOO_MANY_LOGIN_REQUESTS       = 10012
 	USER_NOT_EXIST_OR_PWD_INVALID = 10013
+	OIDC_OFFLINE                  = 10014
+	OIDC_STARTING                 = 10015
+	OIDC_LIVE                     = 10016
 
 	// system
 	DIR_ALREADY_EXISTS              = 20001
@@ -76,6 +79,9 @@ var MsgFlags = map[int]string{
 	INSUFFICIENT_PERMISSIONS:      "Insufficient permissions",
 	TOO_MANY_LOGIN_REQUESTS:       "Too many login requests",
 	USER_NOT_EXIST_OR_PWD_INVALID: "User does not exist or password is invalid",
+	OIDC_OFFLINE:                  "Authentik Server is Offline try again later",
+	OIDC_STARTING:                 "Authentik Server is Starting",
+	OIDC_LIVE:                     "Authentik Server is Live and healthy",
 
 	// system
 	DIR_ALREADY_EXISTS:   "Folder already exists",
